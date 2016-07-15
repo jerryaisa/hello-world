@@ -1,12 +1,279 @@
-extends _partial/layout
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>React Native 读书笔记 | Jerry&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#React Native 读书笔记
 
-prepend site_title
-    != page.title + " · "
+首先安装环境
+   brew install node   brew install watchman
 
-block content
-    include _mixin/post
-    +postList(page)
-    aside.sidebar
-        include _sidebar/tag
-        include _sidebar/post
-        //- include _sidebar/toc
+安装react-native
+   npm install -g react-native-cli
+
+创建react-nactive项目
+   react-native init AwesomeProject
+
+
+
+用android studio 打开A">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React Native 读书笔记">
+<meta property="og:url" content="http://yoursite.com/2016/07/12/React_native读书笔记/index.html">
+<meta property="og:site_name" content="Jerry's blog">
+<meta property="og:description" content="#React Native 读书笔记
+
+首先安装环境
+   brew install node   brew install watchman
+
+安装react-native
+   npm install -g react-native-cli
+
+创建react-nactive项目
+   react-native init AwesomeProject
+
+
+
+用android studio 打开A">
+<meta property="og:updated_time" content="2016-07-15T06:17:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React Native 读书笔记">
+<meta name="twitter:description" content="#React Native 读书笔记
+
+首先安装环境
+   brew install node   brew install watchman
+
+安装react-native
+   npm install -g react-native-cli
+
+创建react-nactive项目
+   react-native init AwesomeProject
+
+
+
+用android studio 打开A">
+  
+    <link rel="alternate" href="/atom.xml" title="Jerry&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Jerry&#39;s blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-React_native读书笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/12/React_native读书笔记/" class="article-date">
+  <time datetime="2016-07-12T04:35:43.000Z" itemprop="datePublished">2016-07-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      React Native 读书笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#React Native 读书笔记</p>
+<ul>
+<li><p><code>首先安装环境</code></p>
+<p>   brew install node<br>   brew install watchman</p>
+</li>
+<li><p><code>安装react-native</code></p>
+<p>   npm install -g react-native-cli</p>
+</li>
+<li><p><code>创建react-nactive项目</code></p>
+<p>   react-native init AwesomeProject</p>
+</li>
+</ul>
+<ul>
+<li><p>用android studio 打开AwesomeProject文件夹下的<code>android文件夹</code>，这个文件夹才是安卓项目，直接打开AwesomeProject，无法在图形化界面启动debug</p>
+</li>
+<li><p>在android studio内的Terminal中输入adb devices，检查手机是否正常链接</p>
+<p>   $ adb devices<br>   List of devices attached<br>   emulator-5554 offline   # Google模拟器<br>   14ed2fcc device         # 真实设备</p>
+</li>
+<li><p>cd .. 回到AwesomeProject目录，输入react-native run-android 项目启动</p>
+<p>   cd ..<br>   react-native run-android</p>
+</li>
+</ul>
+<p>#重点来了<br>这时候可能显示一个红色界面，不可用，按照一下步骤操作</p>
+<ol>
+<li><code>首先确保你的电脑和手机设备在同一个Wi-Fi环境下。</code></li>
+<li>在设备上运行你的React Native应用。和打开其它App一样操作。</li>
+<li>你应该会看到一个“红屏”错误提示。这是正常的，下面的步骤会解决这个报错。</li>
+<li>摇晃设备，或者运行adb shell input keyevent 82，可以打开开发者菜单。</li>
+<li>点击进入Dev Settings。</li>
+<li>点击Debug server host for device。</li>
+<li>输入你电脑的IP地址和端口号（譬如10.0.1.1:8081）。在Mac上，你可以在系统设置/网络里找查询你的IP地址。在Windows上，打开命令提示符并输入ipconfig来查询你的IP地址。在Linux上你可以在终端中输入ifconfig来查询你的IP地址。</li>
+<li>回到开发者菜单然后选择Reload JS。</li>
+</ol>
+<p>(Android 5.0及以上)使用adb reverse命令</p>
+<ol>
+<li>首先把你的设备通过USB数据线连接到电脑上，并开启USB调试（关于如何开启USB调试，参见上面的章节）。</li>
+<li>运行adb reverse tcp:8081 tcp:8081</li>
+<li>需要更多配置，你就可以使用Reload JS和其它的开发选项了。</li>
+</ol>
+<p>完成上面的设置后，你的手机可能仍显示红色屏幕，<code>这时候可能是js服务器没有启动</code>，你需要启动他，在android studio内的Terminal中输入:</p>
+<pre><code>react-native start
+</code></pre><p>现在可以跑了，我用android studio负责完成链接手机调试功能, 用Atom编辑JS文件</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/12/React_native读书笔记/" data-id="ciqndvakl0003uvbr1o0mrdy9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/07/12/Butter Knife学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ButterKnife学习笔记
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Arkiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Siste innlegg</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/07/14/Intent学习笔记/">Intent笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/14/Android基础总览/">Android 基础技术难点总览</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/12/Butter Knife学习笔记/">ButterKnife学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/12/React_native读书笔记/">React Native 读书笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 wangchong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
