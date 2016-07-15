@@ -89,11 +89,11 @@
 我们可以根据github上这个项目自带的帮助，来完成初始配置}
 
 首先在项目级别的build.gradle增加如下的代码
+
    buildscript {
-repositories {
-  mavenCentral()
- }
-dependencies {">
+     repositories {
+       mavenCentral()
+      }">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ButterKnife学习笔记">
 <meta property="og:url" content="http://yoursite.com/2016/07/12/Butter Knife学习笔记/index.html">
@@ -103,16 +103,16 @@ dependencies {">
 我们可以根据github上这个项目自带的帮助，来完成初始配置}
 
 首先在项目级别的build.gradle增加如下的代码
+
    buildscript {
-repositories {
-  mavenCentral()
- }
-dependencies {">
+     repositories {
+       mavenCentral()
+      }">
 <meta property="og:image" content="http://img.blog.csdn.net/20150811234046786">
 <meta property="og:image" content="http://img.blog.csdn.net/20150608104715287">
 <meta property="og:image" content="http://img.blog.csdn.net/20150811234249201">
 <meta property="og:image" content="https://github.com/avast/android-butterknife-zelezny/raw/master/img/zelezny_animated.gif">
-<meta property="og:updated_time" content="2016-07-15T06:24:56.000Z">
+<meta property="og:updated_time" content="2016-07-15T10:44:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ButterKnife学习笔记">
 <meta name="twitter:description" content="#ButterKnife学习笔记懒人必备
@@ -120,11 +120,11 @@ dependencies {">
 我们可以根据github上这个项目自带的帮助，来完成初始配置}
 
 首先在项目级别的build.gradle增加如下的代码
+
    buildscript {
-repositories {
-  mavenCentral()
- }
-dependencies {">
+     repositories {
+       mavenCentral()
+      }">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20150811234046786">
 
 
@@ -313,27 +313,37 @@ dependencies {">
 <p>我们可以根据github上这个项目自带的帮助，来完成初始配置}</p>
 <ul>
 <li><p>首先在项目级别的<code>build.gradle</code>增加如下的代码</p>
-<p>   buildscript {</p>
-<pre><code>repositories {
-  mavenCentral()
- }
-dependencies {
-  classpath &apos;com.neenbedankt.gradle.plugins:android-apt:1.8&apos;
-}
-</code></pre><p>   }    </p>
+<pre>
+   buildscript {
+     repositories {
+       mavenCentral()
+      }
+     dependencies {
+       classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+     }
+   }    
+</pre>
 </li>
 <li><p>然后在模块级的<code>build.gradle</code>增加如下代码</p>
-<p>   apply plugin: ‘android-apt’</p>
-<p>   android {</p>
-<pre><code>...
-</code></pre><p>   }</p>
-<p>   dependencies {</p>
-<pre><code>compile &apos;com.jakewharton:butterknife:8.2.1&apos;
-apt &apos;com.jakewharton:butterknife-compiler:8.2.1&apos;
-</code></pre><p>   }</p>
+<pre>
+
+   apply plugin: 'android-apt'
+
+   android {
+    ...
+   }
+
+   dependencies {
+    compile 'com.jakewharton:butterknife:8.2.1'
+    apt 'com.jakewharton:butterknife-compiler:8.2.1'
+   }
+
+</pre>
+
 </li>
 </ul>
 <p><strong>以上代码，都是从github copy的，使用时请从github直接复制，项目更新时，脚本可能有变动</strong></p>
+<a id="more"></a>
 <p>ButterKnife帮助，可以看官网，官网最全<br><code>http://jakewharton.github.io/butterknife/</code><br><br><br><br>                    </p>
 <p>##现在已经可以使用ButterKnife了<br><code>代码大概是这样</code></p>
 <pre><code>public class MainActivity extends AppCompatActivity {

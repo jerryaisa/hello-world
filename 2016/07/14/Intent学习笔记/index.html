@@ -99,7 +99,7 @@
 启动一个Activity
  Activity">
 <meta property="og:image" content="http://images.cnitblog.com/blog/430074/201303/30232228-7018010dc763474db67a0fad6b3e33c9.jpg">
-<meta property="og:updated_time" content="2016-07-15T06:18:17.000Z">
+<meta property="og:updated_time" content="2016-07-15T10:46:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Intent笔记">
 <meta name="twitter:description" content="#Intent笔记Intent负责对应用中一次操作进行描述，描述内容包括动作以及动作所涉及的数据，Android中的Intent机制则根据此描述，找到对应的组件，将Intent传递给该被调用组件，完成对组件的一次调用。可见，在Intent中提供了组件互相调用的相关信息，实现了调用者与被调用者之间的解耦。
@@ -301,8 +301,6 @@
 <p> Context.<font color="#1db2cc">startService</font>(Intent service); 　//启动一个服务</p>
 <p> Context.<font color="#1db2cc">bindService</font>(Intent service, ServiceConnection conn, int flags); 　//通过bindService</p>
 </li>
-</ol>
-<ol>
 <li><p><strong>启动一个Broadcast(广播)发送给broadcast receivers(广播接收器)</strong></p>
 <pre><code>sendBroadcast(Intent intent); 
 sendBroadcastAsUser(Intent intent, UserHandle user); 
@@ -315,6 +313,7 @@ sendOrderedBroadcastAsUser(Intent intent, UserHandle user, String receiverPermis
 BroadcastReceiver resultReceiver,Handler scheduler, int initialCode, String initialData, Bundle initialExtras);
 </code></pre></li>
 </ol>
+<a id="more"></a>
 <p>####Intent属性设置</p>
 <p>Intent的属性设置包括：<code>Action</code>（要执行的动作）、<code>Data</code>（执行动作所操作的数据）、<code>Type</code>（显式的指定Intent的数据类型）、<code>Category</code>（执行动作的附加信息）、<code>Component</code>（指定Intent目标组件的类名称）、<code>Extras</code>（其它所有附加信息的集合）</p>
 <ol>
