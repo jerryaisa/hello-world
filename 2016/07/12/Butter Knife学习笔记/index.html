@@ -1,12 +1,841 @@
-extends _partial/layout
+<!doctype html>
 
-prepend site_title
-    != page.title + " · "
 
-block content
-    include _mixin/post
-    +postList(page)
-    aside.sidebar
-        include _sidebar/tag
-        include _sidebar/post
-        //- include _sidebar/toc
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="#ButterKnife学习笔记懒人必备
+– 项目地址：https://github.com/JakeWharton/butterknife
+我们可以根据github上这个项目自带的帮助，来完成初始配置}
+
+首先在项目级别的build.gradle增加如下的代码
+   buildscript {
+repositories {
+  mavenCentral()
+ }
+dependencies {">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ButterKnife学习笔记">
+<meta property="og:url" content="http://yoursite.com/2016/07/12/Butter Knife学习笔记/index.html">
+<meta property="og:site_name" content="Jerry's blog">
+<meta property="og:description" content="#ButterKnife学习笔记懒人必备
+– 项目地址：https://github.com/JakeWharton/butterknife
+我们可以根据github上这个项目自带的帮助，来完成初始配置}
+
+首先在项目级别的build.gradle增加如下的代码
+   buildscript {
+repositories {
+  mavenCentral()
+ }
+dependencies {">
+<meta property="og:image" content="http://img.blog.csdn.net/20150811234046786">
+<meta property="og:image" content="http://img.blog.csdn.net/20150608104715287">
+<meta property="og:image" content="http://img.blog.csdn.net/20150811234249201">
+<meta property="og:image" content="https://github.com/avast/android-butterknife-zelezny/raw/master/img/zelezny_animated.gif">
+<meta property="og:updated_time" content="2016-07-15T06:24:56.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ButterKnife学习笔记">
+<meta name="twitter:description" content="#ButterKnife学习笔记懒人必备
+– 项目地址：https://github.com/JakeWharton/butterknife
+我们可以根据github上这个项目自带的帮助，来完成初始配置}
+
+首先在项目级别的build.gradle增加如下的代码
+   buildscript {
+repositories {
+  mavenCentral()
+ }
+dependencies {">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20150811234046786">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/07/12/Butter Knife学习笔记/"/>
+
+  <title> ButterKnife学习笔记 | Jerry's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Jerry's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                ButterKnife学习笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-07-12T17:35:43+08:00" content="2016-07-12">
+              2016-07-12
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>#ButterKnife学习笔记<br><code>懒人必备</code></p>
+<p>– 项目地址：<a href="https://github.com/JakeWharton/butterknife" target="_blank" rel="external">https://github.com/JakeWharton/butterknife</a></p>
+<p>我们可以根据github上这个项目自带的帮助，来完成初始配置}</p>
+<ul>
+<li><p>首先在项目级别的<code>build.gradle</code>增加如下的代码</p>
+<p>   buildscript {</p>
+<pre><code>repositories {
+  mavenCentral()
+ }
+dependencies {
+  classpath &apos;com.neenbedankt.gradle.plugins:android-apt:1.8&apos;
+}
+</code></pre><p>   }    </p>
+</li>
+<li><p>然后在模块级的<code>build.gradle</code>增加如下代码</p>
+<p>   apply plugin: ‘android-apt’</p>
+<p>   android {</p>
+<pre><code>...
+</code></pre><p>   }</p>
+<p>   dependencies {</p>
+<pre><code>compile &apos;com.jakewharton:butterknife:8.2.1&apos;
+apt &apos;com.jakewharton:butterknife-compiler:8.2.1&apos;
+</code></pre><p>   }</p>
+</li>
+</ul>
+<p><strong>以上代码，都是从github copy的，使用时请从github直接复制，项目更新时，脚本可能有变动</strong></p>
+<p>ButterKnife帮助，可以看官网，官网最全<br><code>http://jakewharton.github.io/butterknife/</code><br><br><br><br>                    </p>
+<p>##现在已经可以使用ButterKnife了<br><code>代码大概是这样</code></p>
+<pre><code>public class MainActivity extends AppCompatActivity {
+
+    @BindView(R.id.text_veiw_tv1)
+    TextView textVeiwTv1;
+    @BindView(R.id.button_bt1)
+    Button buttonBt1;
+    @BindView(R.id.text_veiw_tv2)
+    TextView textVeiwTv2;
+    @BindView(R.id.button_bt2)
+    Button buttonBt2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
+
+        textVeiwTv1.setText(&quot;我草&quot;);
+
+        textVeiwTv2.setText(&quot;牛逼啊&quot;);
+    }
+
+    @OnClick({R.id.text_veiw_tv1, R.id.button_bt1, R.id.text_veiw_tv2, R.id.button_bt2})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.text_veiw_tv1:
+                break;
+            case R.id.button_bt1:
+                break;
+            case R.id.text_veiw_tv2:
+                break;
+            case R.id.button_bt2:
+                break;
+        }
+    }
+}
+</code></pre><p>到这里我们虽然可以使用，但还不够懒，我们希望ButterKnife相关的代码，我们都不用手写，<code>机器就能搞定它！</code><br><br><br><br>   </p>
+<p>##Android Studio 安装ButterKnife插件</p>
+<ul>
+<li><p>打开Plugins界面<br><img src="http://img.blog.csdn.net/20150811234046786" alt="打开Plugins界面"><br><br><br><br><img src="http://img.blog.csdn.net/20150608104715287" alt="image"></p>
+</li>
+<li><p><code>这里我们选择民间插件</code></p>
+</li>
+<li><p>搜索并将图形化生成代码的插件安装上<br><img src="http://img.blog.csdn.net/20150811234249201" alt="image"></p>
+</li>
+<li><p>我们可以像下面这样使用了<br><img src="https://github.com/avast/android-butterknife-zelezny/raw/master/img/zelezny_animated.gif" alt="image"></p>
+</li>
+</ul>
+<p><br><br><br>   </p>
+<p>##正式开始使用ButterKnife</p>
+<p>####在activity中使用</p>
+<ul>
+<li><p>首先我们使用@BindView去绑定view id</p>
+<pre><code>class ExampleActivity extends Activity {
+  @BindView(R.id.title) TextView title;
+  @BindView(R.id.subtitle) TextView subtitle;
+  @BindView(R.id.footer) TextView footer;
+
+  @Override public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.simple_activity);
+    ButterKnife.bind(this);
+    // TODO Use fields...
+  }
+}
+</code></pre></li>
+<li><p><code>ButterKnife.bind(this)</code>其实就是做了这些</p>
+<pre><code>public void bind(ExampleActivity activity) {
+  activity.subtitle = (android.widget.TextView) activity.findViewById(2130968578);
+  activity.footer = (android.widget.TextView) activity.findViewById(2130968579);
+  activity.title = (android.widget.TextView) activity.findViewById(2130968577);
+}
+</code></pre></li>
+<li><p>资源绑定的方法</p>
+<pre><code>class ExampleActivity extends Activity {
+  @BindString(R.string.title) String title;
+  @BindDrawable(R.drawable.graphic) Drawable graphic;
+  @BindColor(R.color.red) int red; // int or ColorStateList field
+  @BindDimen(R.dimen.spacer) Float spacer; // int (for pixel size) or float (for exact value) field
+  // ...
+}
+</code></pre></li>
+</ul>
+<p>####如果不在activity中使用(Fragment或者Adapter)，你只需要告诉他view是那个就可以了</p>
+<p>像这样<code>ButterKnife.bind(this, view);</code></p>
+<ul>
+<li><p>Fragment中的例子</p>
+<pre><code>public class FancyFragment extends Fragment {
+  @BindView(R.id.button1) Button button1;
+  @BindView(R.id.button2) Button button2;
+
+  @Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    View view = inflater.inflate(R.layout.fancy_fragment, container, false);
+    ButterKnife.bind(this, view);
+    // TODO Use fields...
+    return view;
+  }
+}
+</code></pre></li>
+<li><p>Adapter中的例子</p>
+<pre><code>public class MyAdapter extends BaseAdapter {
+  @Override public View getView(int position, View view, ViewGroup parent) {
+    ViewHolder holder;
+    if (view != null) {
+      holder = (ViewHolder) view.getTag();
+    } else {
+      view = inflater.inflate(R.layout.whatever, parent, false);
+      holder = new ViewHolder(view);
+      view.setTag(holder);
+    }
+
+    holder.name.setText(&quot;John Doe&quot;);
+    // etc...
+
+    return view;
+  }
+
+  static class ViewHolder {
+    @BindView(R.id.title) TextView name;
+    @BindView(R.id.job_title) TextView jobTitle;
+
+    public ViewHolder(View view) {
+      ButterKnife.bind(this, view);
+    }
+  }
+}
+</code></pre></li>
+<li><p>把多个view放入一个List中</p>
+<pre><code>@BindViews({ R.id.first_name, R.id.middle_name, R.id.last_name })
+List&lt;EditText&gt; nameViews;
+</code></pre><p>apply方法允许队List中所有元素统一修改状态</p>
+<pre><code>ButterKnife.apply(nameViews, DISABLE);
+ButterKnife.apply(nameViews, ENABLED, false);
+</code></pre><p>Action和Setter接口允许指定简单的行为。</p>
+<pre><code>static final ButterKnife.Action&lt;View&gt; DISABLE = new ButterKnife.Action&lt;View&gt;() {
+  @Override public void apply(View view, int index) {
+    view.setEnabled(false);
+  }
+};
+static final ButterKnife.Setter&lt;View, Boolean&gt; ENABLED = new ButterKnife.Setter&lt;View, Boolean&gt;() {
+  @Override public void set(View view, Boolean value, int index) {
+    view.setEnabled(value);
+  }
+};
+</code></pre><p>android自己的属性也可以用apply去统一修改，像这样</p>
+<pre><code>ButterKnife.apply(nameViews, View.ALPHA, 0.0f);
+</code></pre><p>也可以在方法上，直接配置，把它设定为指定view的监听器(还可以重载，下面两个submit支持有参数或者无参数)</p>
+<pre><code>@OnClick(R.id.submit)
+public void submit(View view) {
+  // TODO submit data to server...
+}
+
+@OnClick(R.id.submit)
+public void submit() {
+  // TODO submit data to server...
+}
+</code></pre><p>参数还可以传特定的类型(让button上的文字改变)</p>
+<pre><code>@OnClick(R.id.submit)
+public void sayHi(Button button) {
+  button.setText(&quot;Hello!&quot;);
+}
+</code></pre><p>指定多个id的绑定</p>
+<pre><code>@OnClick({ R.id.door1, R.id.door2, R.id.door3 })
+public void pickDoor(DoorView door) {
+  if (door.hasPrizeBehind()) {
+    Toast.makeText(this, &quot;You win!&quot;, LENGTH_SHORT).show();
+  } else {
+    Toast.makeText(this, &quot;Try again&quot;, LENGTH_SHORT).show();
+  }
+}
+</code></pre><p>自定义的view也可以通过不指定id，就绑定自己的onclick事件</p>
+<pre><code>public class FancyButton extends Button {
+  @OnClick
+  public void onClick() {
+      // 这里FancyButton连id都没有...
+    // TODO do something!
+  }
+}
+</code></pre></li>
+<li><p>因为Fragments和activity的生命周期不同，所以建议在Fragments中使用Butter Knife需要在onDestroyView中释放</p>
+<pre><code>public class FancyFragment extends Fragment {
+  @BindView(R.id.button1) Button button1;
+  @BindView(R.id.button2) Button button2;
+  private Unbinder unbinder;
+
+  @Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    View view = inflater.inflate(R.layout.fancy_fragment, container, false);
+    unbinder = ButterKnife.bind(this, view);
+    // TODO Use fields...
+    return view;
+  }
+
+  @Override public void onDestroyView() {
+    super.onDestroyView();
+    unbinder.unbind();
+  }
+}
+</code></pre></li>
+<li><p>默认情况下，@Bind和监听绑定，targetView是必须的，如果它不存在，就会报错，为了抑制这种情况，<code>鼓励使用一个可选的绑定</code>，增加@Nullable注释<code>字段</code>或@optional注释的<code>方法</code>，记住这是被鼓励的，你可以在任何地方都去注释! 如果targetView存在,则注入, 不存在,则什么事情都不做. <code>当布局被复用时,这个@Optional注解很有用.</code></p>
+<pre><code>@Nullable annotation from Android&apos;s &quot;support-annotations&quot; library.
+
+@Nullable @BindView(R.id.might_not_be_there) TextView mightNotBeThere;
+
+@Optional @OnClick(R.id.maybe_missing) void onMaybeMissingClicked() {
+  // TODO ...
+}
+</code></pre></li>
+<li><p>如果指定的view的监听器有多个回调，也可以用注释一一绑定，可以使用callback参数声明一个可替代的回调。</p>
+<pre><code>@OnItemSelected(R.id.my_spinner)
+void onItemSelected(int position) {
+  // TODO ...
+}
+
+@OnItemSelected(value = R.id.my_spinner, callback = NOTHING_SELECTED)
+void onNothingSelected() {
+  // TODO ...
+}
+</code></pre><p>有一些View的listener是有多个回调方法的, spinner本来的回调</p>
+<pre><code>mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+    @Override
+    public void onItemSelected(AdapterView&lt;?&gt; parent, View view, int position, long id) {
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView&lt;?&gt; parent) {
+    }
+});
+</code></pre><p><code>看一个例子：</code><br><a href="https://github.com/mengdd/AndroidButterKnifeSample/blob/master/app/src/main/java/com/example/mengdd/butterknifesample/SpinnerActivity.java" target="_blank" rel="external">https://github.com/mengdd/AndroidButterKnifeSample/blob/master/app/src/main/java/com/example/mengdd/butterknifesample/SpinnerActivity.java</a><br><br><br><br></p>
+</li>
+<li><p>ButterKnife也支持这样findView，返回的是范型。所以前面不需要再(TextView)这样转化类型了</p>
+<pre><code>View view = LayoutInflater.from(context).inflate(R.layout.thing, null);
+TextView firstName = ButterKnife.findById(view, R.id.first_name);
+TextView lastName = ButterKnife.findById(view, R.id.last_name);
+ImageView photo = ButterKnife.findById(view, R.id.photo);
+</code></pre></li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/12/React_native读书笔记/" rel="next" title="React Native 读书笔记">
+                <i class="fa fa-chevron-left"></i> React Native 读书笔记
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/14/Android基础总览/" rel="prev" title="Android 基础技术难点总览">
+                Android 基础技术难点总览 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="wangchong" />
+          <p class="site-author-name" itemprop="name">wangchong</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">Artikel</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">Dieser Artikel hat kein Inhaltsverzeichnis</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wangchong</span>
+</div>
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
