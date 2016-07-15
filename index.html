@@ -1,9 +1,12 @@
-extends _partial/layout
+extends partial/layout
 
-block content
-    include _mixin/post
-    +homePost()
+block container
+    include mixins/post
+    +posts()
 
-block extra
-    include _components/project
-    include _components/selfintro
+block pagination
+    include mixins/paginator
+    +home()
+
+block copyright
+    include partial/copyright

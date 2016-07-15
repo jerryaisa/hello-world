@@ -1,12 +1,20 @@
-extends _partial/layout
+extends partial/layout
 
-prepend site_title
-    != page.title + " · "
+block site_title
+    != page.title + " · " + config.title
 
-block content
-    include _mixin/post
-    +postList(page)
-    aside.sidebar
-        include _sidebar/tag
-        include _sidebar/post
-        //- include _sidebar/toc
+block description
+    - var desc = page.desc || page.title + ' - ' + config.author;
+    meta(name="description", content=desc)
+
+block container
+    include mixins/post
+    +post(page)
+
+block pagination
+    include mixins/paginator
+    +post()
+    include partial/comment
+
+block copyright
+    include partial/copyright

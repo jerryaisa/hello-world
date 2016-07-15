@@ -1,8 +1,12 @@
-extends _partial/layout
+extends partial/layout
 
-block content
-    include _mixin/post
-    +archivePost()
-    aside.sidebar
-        include _sidebar/tag
-        include _sidebar/post
+block container
+    include mixins/post
+    +postList()
+
+block pagination
+    include mixins/paginator
+    +home()
+
+block copyright
+    include partial/copyright
