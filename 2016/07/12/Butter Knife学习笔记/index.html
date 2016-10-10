@@ -84,7 +84,7 @@
 
 
 
-<meta name="description" content="#ButterKnife学习笔记懒人必备
+<meta name="description" content="ButterKnife懒人必备
 – 项目地址：https://github.com/JakeWharton/butterknife
 我们可以根据github上这个项目自带的帮助，来完成初始配置}
 
@@ -98,7 +98,7 @@
 <meta property="og:title" content="ButterKnife学习笔记">
 <meta property="og:url" content="http://yoursite.com/2016/07/12/Butter Knife学习笔记/index.html">
 <meta property="og:site_name" content="Jerry's blog">
-<meta property="og:description" content="#ButterKnife学习笔记懒人必备
+<meta property="og:description" content="ButterKnife懒人必备
 – 项目地址：https://github.com/JakeWharton/butterknife
 我们可以根据github上这个项目自带的帮助，来完成初始配置}
 
@@ -112,10 +112,10 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20150608104715287">
 <meta property="og:image" content="http://img.blog.csdn.net/20150811234249201">
 <meta property="og:image" content="https://github.com/avast/android-butterknife-zelezny/raw/master/img/zelezny_animated.gif">
-<meta property="og:updated_time" content="2016-07-15T10:44:11.000Z">
+<meta property="og:updated_time" content="2016-10-10T09:57:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ButterKnife学习笔记">
-<meta name="twitter:description" content="#ButterKnife学习笔记懒人必备
+<meta name="twitter:description" content="ButterKnife懒人必备
 – 项目地址：https://github.com/JakeWharton/butterknife
 我们可以根据github上这个项目自带的帮助，来完成初始配置}
 
@@ -308,7 +308,7 @@
       
 
       
-        <p>#ButterKnife学习笔记<br><code>懒人必备</code></p>
+        <h1 id="ButterKnife"><a href="#ButterKnife" class="headerlink" title="ButterKnife"></a>ButterKnife</h1><p><code>懒人必备</code></p>
 <p>– 项目地址：<a href="https://github.com/JakeWharton/butterknife" target="_blank" rel="external">https://github.com/JakeWharton/butterknife</a></p>
 <p>我们可以根据github上这个项目自带的帮助，来完成初始配置}</p>
 <ul>
@@ -345,7 +345,7 @@
 <p><strong>以上代码，都是从github copy的，使用时请从github直接复制，项目更新时，脚本可能有变动</strong></p>
 <a id="more"></a>
 <p>ButterKnife帮助，可以看官网，官网最全<br><code>http://jakewharton.github.io/butterknife/</code><br><br><br><br>                    </p>
-<p>##现在已经可以使用ButterKnife了<br><code>代码大概是这样</code></p>
+<h1 id="现在已经可以使用ButterKnife了"><a href="#现在已经可以使用ButterKnife了" class="headerlink" title="现在已经可以使用ButterKnife了"></a>现在已经可以使用ButterKnife了</h1><p><code>代码大概是这样</code></p>
 <pre><code>public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.text_veiw_tv1)
@@ -383,8 +383,7 @@
     }
 }
 </code></pre><p>到这里我们虽然可以使用，但还不够懒，我们希望ButterKnife相关的代码，我们都不用手写，<code>机器就能搞定它！</code><br><br><br><br>   </p>
-<p>##Android Studio 安装ButterKnife插件</p>
-<ul>
+<h1 id="Android-Studio-安装ButterKnife插件"><a href="#Android-Studio-安装ButterKnife插件" class="headerlink" title="Android Studio 安装ButterKnife插件"></a>Android Studio 安装ButterKnife插件</h1><ul>
 <li><p>打开Plugins界面<br><img src="http://img.blog.csdn.net/20150811234046786" alt="打开Plugins界面"><br><br><br><br><img src="http://img.blog.csdn.net/20150608104715287" alt="image"></p>
 </li>
 <li><p><code>这里我们选择民间插件</code></p>
@@ -395,9 +394,7 @@
 </li>
 </ul>
 <p><br><br><br>   </p>
-<p>##正式开始使用ButterKnife</p>
-<p>####在activity中使用</p>
-<ul>
+<h1 id="正式开始使用ButterKnife"><a href="#正式开始使用ButterKnife" class="headerlink" title="正式开始使用ButterKnife"></a>正式开始使用ButterKnife</h1><h2 id="在activity中使用"><a href="#在activity中使用" class="headerlink" title="在activity中使用"></a>在activity中使用</h2><ul>
 <li><p>首先我们使用@BindView去绑定view id</p>
 <pre><code>class ExampleActivity extends Activity {
   @BindView(R.id.title) TextView title;
@@ -429,8 +426,7 @@
 }
 </code></pre></li>
 </ul>
-<p>####如果不在activity中使用(Fragment或者Adapter)，你只需要告诉他view是那个就可以了</p>
-<p>像这样<code>ButterKnife.bind(this, view);</code></p>
+<h2 id="如果不在activity中使用-Fragment或者Adapter-，你只需要告诉他view是那个就可以了"><a href="#如果不在activity中使用-Fragment或者Adapter-，你只需要告诉他view是那个就可以了" class="headerlink" title="如果不在activity中使用(Fragment或者Adapter)，你只需要告诉他view是那个就可以了"></a>如果不在activity中使用(Fragment或者Adapter)，你只需要告诉他view是那个就可以了</h2><p>像这样<code>ButterKnife.bind(this, view);</code></p>
 <ul>
 <li><p>Fragment中的例子</p>
 <pre><code>public class FancyFragment extends Fragment {
@@ -615,8 +611,8 @@ ImageView photo = ButterKnife.findById(view, R.id.photo);
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/14/Android基础总览/" rel="prev" title="Android 基础技术难点总览">
-                Android 基础技术难点总览 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/14/Android基础总览/" rel="prev" title="Android 基础技术难点总览(笔记)">
+                Android 基础技术难点总览(笔记) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -685,7 +681,7 @@ ImageView photo = ButterKnife.findById(view, R.id.photo);
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -717,7 +713,7 @@ ImageView photo = ButterKnife.findById(view, R.id.photo);
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ButterKnife"><span class="nav-number">1.</span> <span class="nav-text">ButterKnife</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#现在已经可以使用ButterKnife了"><span class="nav-number">2.</span> <span class="nav-text">现在已经可以使用ButterKnife了</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Android-Studio-安装ButterKnife插件"><span class="nav-number">3.</span> <span class="nav-text">Android Studio 安装ButterKnife插件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正式开始使用ButterKnife"><span class="nav-number">4.</span> <span class="nav-text">正式开始使用ButterKnife</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在activity中使用"><span class="nav-number">4.1.</span> <span class="nav-text">在activity中使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如果不在activity中使用-Fragment或者Adapter-，你只需要告诉他view是那个就可以了"><span class="nav-number">4.2.</span> <span class="nav-text">如果不在activity中使用(Fragment或者Adapter)，你只需要告诉他view是那个就可以了</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

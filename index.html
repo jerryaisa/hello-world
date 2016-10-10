@@ -235,6 +235,201 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/10/创建GitHub技术博客学习笔记/" itemprop="url">
+                  创建GitHub技术博客学习笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-10T17:50:43+08:00" content="2016-10-10">
+              2016-10-10
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="首先-你需要注册一个-github-账号"><a href="#首先-你需要注册一个-github-账号" class="headerlink" title="首先,你需要注册一个 github 账号"></a>首先,你需要注册一个 github 账号</h1><h2 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号:"></a>注册账号:</h2><p>地址: <a href="https://github.com/">https://github.com/</a><br><img src="http://img.blog.csdn.net/20140712125642518?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcmVuZnVmZWk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" width="100%"><br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/10/创建GitHub技术博客学习笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/10/HEXO在Github上搭建博客学习笔记/" itemprop="url">
+                  通过HEXO在Github上搭建博客学习笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-10T17:35:43+08:00" content="2016-10-10">
+              2016-10-10
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Hexo初始化博客框架"><a href="#Hexo初始化博客框架" class="headerlink" title="Hexo初始化博客框架"></a>Hexo初始化博客框架</h1><h2 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1.安装Hexo"></a>1.安装Hexo</h2><p>Hexo安装和搭建依赖Nodejs和Git,可自行下载。</p>
+<pre>
+$ npm install -g hexo-cli
+</pre>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/10/HEXO在Github上搭建博客学习笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/14/Intent学习笔记/" itemprop="url">
                   Intent笔记
                 </a>
@@ -278,19 +473,14 @@
 
       
         
-          <p>#Intent笔记<br>Intent负责对应用中一次操作进行描述，描述内容包括动作以及动作所涉及的数据，Android中的Intent机制则根据此描述，找到对应的组件，将Intent传递给该被调用组件，完成对组件的一次调用。<code>可见，在Intent中提供了组件互相调用的相关信息，实现了调用者与被调用者之间的解耦。</code></p>
-<p>####Intent的应用场合，主要有以下三种</p>
-<ol>
-<li><p><strong>启动一个Activity</strong></p>
-<p> Activity.<font color="#1db2cc">startActivity</font>(Intent intent);　//启动一个Activity</p>
-<p> Activity.<font color="#1db2cc">startActivityForResult</font>(Intent intent, int requestCode);　//启动一个<code>带请求码的Activity</code>，当该Activity结束时将回调<code>原Activity</code>的onActivityResult()方法，并返回一个<code>结果码</code>。</p>
-</li>
-<li><p><strong>启动一个Service</strong></p>
-<p> Context.<font color="#1db2cc">startService</font>(Intent service); 　//启动一个服务</p>
-<p> Context.<font color="#1db2cc">bindService</font>(Intent service, ServiceConnection conn, int flags); 　//通过bindService</p>
-</li>
-<li><p><strong>启动一个Broadcast(广播)发送给broadcast receivers(广播接收器)</strong></p>
-<pre><code>sendBroadcast(Intent intent); 
+          <p>Intent负责对应用中一次操作进行描述，描述内容包括动作以及动作所涉及的数据，Android中的Intent机制则根据此描述，找到对应的组件，将Intent传递给该被调用组件，完成对组件的一次调用。<code>可见，在Intent中提供了组件互相调用的相关信息，实现了调用者与被调用者之间的解耦。</code></p>
+<h1 id="Intent的应用场合，主要有以下三种"><a href="#Intent的应用场合，主要有以下三种" class="headerlink" title="Intent的应用场合，主要有以下三种"></a>Intent的应用场合，主要有以下三种</h1><h2 id="启动一个Activity"><a href="#启动一个Activity" class="headerlink" title="启动一个Activity"></a>启动一个Activity</h2><pre><code>Activity.&lt;font color=&quot;#1db2cc&quot;&gt;startActivity&lt;/font&gt;(Intent intent);　//启动一个Activity
+
+Activity.&lt;font color=&quot;#1db2cc&quot;&gt;startActivityForResult&lt;/font&gt;(Intent intent, int requestCode);　//启动一个`带请求码的Activity`，当该Activity结束时将回调`原Activity`的onActivityResult()方法，并返回一个`结果码`。
+</code></pre><h2 id="启动一个Service"><a href="#启动一个Service" class="headerlink" title="启动一个Service"></a>启动一个Service</h2><pre><code>Context.&lt;font color=&quot;#1db2cc&quot;&gt;startService&lt;/font&gt;(Intent service); 　//启动一个服务
+
+Context.&lt;font color=&quot;#1db2cc&quot;&gt;bindService&lt;/font&gt;(Intent service, ServiceConnection conn, int flags); 　//通过bindService
+</code></pre><h2 id="启动一个Broadcast-广播-发送给broadcast-receivers-广播接收器"><a href="#启动一个Broadcast-广播-发送给broadcast-receivers-广播接收器" class="headerlink" title="启动一个Broadcast(广播)发送给broadcast receivers(广播接收器)"></a>启动一个Broadcast(广播)发送给broadcast receivers(广播接收器)</h2><pre><code>sendBroadcast(Intent intent); 
 sendBroadcastAsUser(Intent intent, UserHandle user); 
 //
 sendStickyBroadcast(Intent intent); 
@@ -299,8 +489,7 @@ sendStickyBroadcastAsUser(Intent intent, UserHandle user);
 sendOrderedBroadcast(Intent intent, String receiverPermission); 
 sendOrderedBroadcastAsUser(Intent intent, UserHandle user, String receiverPermission,
 BroadcastReceiver resultReceiver,Handler scheduler, int initialCode, String initialData, Bundle initialExtras);
-</code></pre></li>
-</ol>
+</code></pre>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/07/14/Intent学习笔记/#more" rel="contents">
               阅读全文 &raquo;
@@ -354,7 +543,7 @@ BroadcastReceiver resultReceiver,Handler scheduler, int initialCode, String init
               
                 
                 <a class="post-title-link" href="/2016/07/14/Android基础总览/" itemprop="url">
-                  Android 基础技术难点总览
+                  Android 基础技术难点总览(笔记)
                 </a>
               
             
@@ -396,15 +585,17 @@ BroadcastReceiver resultReceiver,Handler scheduler, int initialCode, String init
 
       
         
-          <p>#Android 基础技术难点总览</p>
-<p><a href="http://blog.csdn.net/Zengyangtech/article/details/6025676">简要解释一下activity、 intent 、intent filter、service、Broadcast、BroadcaseReceiver</a></p>
-<ol>
-<li><p><strong>ServiceMananger</strong></p>
-<p> 它是在init进程启动之后启动，从名字上就可以看出来它是<code>用来管理系统中的service</code><br/><br> <strong>Service Manager存在的意义</strong></p>
-<ul>
-<li>Service Manager能集中管理系统内的所有服务，它能被施加权限控制，并不是任何进程都能注册服务的。</li>
-<li>Service Manager支持通过字符串名称来查找对应的Service。</li>
-<li>由于各种原因的影响，Server进程可能生死无常。如果有了Service Manager做统一的管理，那么Client只要向Service Manager做查询，就能得到Server的最新信息。<br><br/>参考文献:<br><br/><a href="http://blog.csdn.net/xieqibao/article/details/6585143">Android 之 ServiceManager与服务管理</a><br><br/><a href="http://blog.csdn.net/hu3167343/article/details/38441119">Android Binder机制浅析之ServiceManager</a><br><br/><br/>
+          <p><a href="http://blog.csdn.net/Zengyangtech/article/details/6025676">简要解释一下activity、 intent 、intent filter、service、Broadcast、BroadcaseReceiver</a></p>
+<h1 id="ServiceMananger"><a href="#ServiceMananger" class="headerlink" title="ServiceMananger"></a>ServiceMananger</h1><pre><code>它是在init进程启动之后启动，从名字上就可以看出来它是`用来管理系统中的service`&lt;br/&gt;
+__Service Manager存在的意义__
+* Service Manager能集中管理系统内的所有服务，它能被施加权限控制，并不是任何进程都能注册服务的。
+* Service Manager支持通过字符串名称来查找对应的Service。
+* 由于各种原因的影响，Server进程可能生死无常。如果有了Service Manager做统一的管理，那么Client只要向Service Manager做查询，就能得到Server的最新信息。    
+&lt;br/&gt;参考文献:
+&lt;br/&gt;[Android 之 ServiceManager与服务管理](http://blog.csdn.net/xieqibao/article/details/6585143)
+&lt;br/&gt;[Android Binder机制浅析之ServiceManager](http://blog.csdn.net/hu3167343/article/details/38441119)        
+&lt;br/&gt;&lt;br/&gt;        
+</code></pre>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/07/14/Android基础总览/#more" rel="contents">
               阅读全文 &raquo;
@@ -500,7 +691,7 @@ BroadcastReceiver resultReceiver,Handler scheduler, int initialCode, String init
 
       
         
-          <p>#ButterKnife学习笔记<br><code>懒人必备</code></p>
+          <h1 id="ButterKnife"><a href="#ButterKnife" class="headerlink" title="ButterKnife"></a>ButterKnife</h1><p><code>懒人必备</code></p>
 <p>– 项目地址：<a href="https://github.com/JakeWharton/butterknife">https://github.com/JakeWharton/butterknife</a></p>
 <p>我们可以根据github上这个项目自带的帮助，来完成初始配置}</p>
 <ul>
@@ -630,26 +821,17 @@ BroadcastReceiver resultReceiver,Handler scheduler, int initialCode, String init
 
       
         
-          <p>#React Native 读书笔记</p>
-<ul>
-<li><p><code>首先安装环境</code></p>
-<pre>
-   brew install node
-   brew install watchman
-</pre>
-</li>
-<li><p><code>安装react-native</code></p>
-<pre>
-   npm install -g react-native-cli
-</pre>
-</li>
-<li><p><code>创建react-nactive项目</code></p>
-<pre>
-   react-native init AwesomeProject
-</pre>
-
-</li>
-</ul>
+          <h1 id="首先安装环境"><a href="#首先安装环境" class="headerlink" title="首先安装环境"></a>首先安装环境</h1><pre><code>&lt;pre&gt;
+    brew install node
+    brew install watchman
+&lt;/pre&gt;
+</code></pre><h1 id="安装react-native"><a href="#安装react-native" class="headerlink" title="安装react-native"></a>安装react-native</h1><pre><code>&lt;pre&gt;
+    npm install -g react-native-cli
+&lt;/pre&gt;
+</code></pre><h1 id="创建react-nactive项目"><a href="#创建react-nactive项目" class="headerlink" title="创建react-nactive项目"></a>创建react-nactive项目</h1><pre><code>&lt;pre&gt;
+    react-native init AwesomeProject
+&lt;/pre&gt;
+</code></pre>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/07/12/React_native读书笔记/#more" rel="contents">
               阅读全文 &raquo;
@@ -722,7 +904,7 @@ BroadcastReceiver resultReceiver,Handler scheduler, int initialCode, String init
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

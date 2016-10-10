@@ -84,36 +84,25 @@
 
 
 
-<meta name="description" content="#Android 基础技术难点总览
-简要解释一下activity、 intent 、intent filter、service、Broadcast、BroadcaseReceiver
-
-ServiceMananger
- 它是在init进程启动之后启动，从名字上就可以看出来它是用来管理系统中的service Service Manager存在的意义
-
-Service Manager能集中管理系统内的">
+<meta name="description" content="简要解释一下activity、 intent 、intent filter、service、Broadcast、BroadcaseReceiver
+ServiceMananger它是在init进程启动之后启动，从名字上就可以看出来它是`用来管理系统中的service`&amp;lt;br/&amp;gt;
+__Service Manager存在的意义__
+* Service Manager能集中管理系统内的所有服">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android 基础技术难点总览">
+<meta property="og:title" content="Android 基础技术难点总览(笔记)">
 <meta property="og:url" content="http://yoursite.com/2016/07/14/Android基础总览/index.html">
 <meta property="og:site_name" content="Jerry's blog">
-<meta property="og:description" content="#Android 基础技术难点总览
-简要解释一下activity、 intent 、intent filter、service、Broadcast、BroadcaseReceiver
-
-ServiceMananger
- 它是在init进程启动之后启动，从名字上就可以看出来它是用来管理系统中的service Service Manager存在的意义
-
-Service Manager能集中管理系统内的">
-<meta property="og:image" content="http://images.cnitblog.com/blog/345073/201310/17160734-68ecdc58626449daa60361b0221cf1a6.png">
-<meta property="og:updated_time" content="2016-07-15T10:39:08.000Z">
+<meta property="og:description" content="简要解释一下activity、 intent 、intent filter、service、Broadcast、BroadcaseReceiver
+ServiceMananger它是在init进程启动之后启动，从名字上就可以看出来它是`用来管理系统中的service`&amp;lt;br/&amp;gt;
+__Service Manager存在的意义__
+* Service Manager能集中管理系统内的所有服">
+<meta property="og:updated_time" content="2016-10-10T09:55:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android 基础技术难点总览">
-<meta name="twitter:description" content="#Android 基础技术难点总览
-简要解释一下activity、 intent 、intent filter、service、Broadcast、BroadcaseReceiver
-
-ServiceMananger
- 它是在init进程启动之后启动，从名字上就可以看出来它是用来管理系统中的service Service Manager存在的意义
-
-Service Manager能集中管理系统内的">
-<meta name="twitter:image" content="http://images.cnitblog.com/blog/345073/201310/17160734-68ecdc58626449daa60361b0221cf1a6.png">
+<meta name="twitter:title" content="Android 基础技术难点总览(笔记)">
+<meta name="twitter:description" content="简要解释一下activity、 intent 、intent filter、service、Broadcast、BroadcaseReceiver
+ServiceMananger它是在init进程启动之后启动，从名字上就可以看出来它是`用来管理系统中的service`&amp;lt;br/&amp;gt;
+__Service Manager存在的意义__
+* Service Manager能集中管理系统内的所有服">
 
 
 
@@ -136,7 +125,7 @@ Service Manager能集中管理系统内的">
 
   <link rel="canonical" href="http://yoursite.com/2016/07/14/Android基础总览/"/>
 
-  <title> Android 基础技术难点总览 | Jerry's blog </title>
+  <title> Android 基础技术难点总览(笔记) | Jerry's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -256,7 +245,7 @@ Service Manager能集中管理系统内的">
             
             
               
-                Android 基础技术难点总览
+                Android 基础技术难点总览(笔记)
               
             
           </h1>
@@ -296,76 +285,102 @@ Service Manager能集中管理系统内的">
       
 
       
-        <p>#Android 基础技术难点总览</p>
-<p><a href="http://blog.csdn.net/Zengyangtech/article/details/6025676" target="_blank" rel="external">简要解释一下activity、 intent 、intent filter、service、Broadcast、BroadcaseReceiver</a></p>
-<ol>
-<li><p><strong>ServiceMananger</strong></p>
-<p> 它是在init进程启动之后启动，从名字上就可以看出来它是<code>用来管理系统中的service</code><br><br> <strong>Service Manager存在的意义</strong></p>
-<ul>
-<li>Service Manager能集中管理系统内的所有服务，它能被施加权限控制，并不是任何进程都能注册服务的。</li>
-<li>Service Manager支持通过字符串名称来查找对应的Service。</li>
-<li>由于各种原因的影响，Server进程可能生死无常。如果有了Service Manager做统一的管理，那么Client只要向Service Manager做查询，就能得到Server的最新信息。<br><br>参考文献:<br><br><a href="http://blog.csdn.net/xieqibao/article/details/6585143" target="_blank" rel="external">Android 之 ServiceManager与服务管理</a><br><br><a href="http://blog.csdn.net/hu3167343/article/details/38441119" target="_blank" rel="external">Android Binder机制浅析之ServiceManager</a><br><br><br>        <a id="more"></a>
-</li>
-</ul>
-</li>
-<li><p><strong>ActivityManager</strong></p>
-<pre><code>//1. 返回用户最近使用过的应用程序信息集合。第一个参数是最大数量，第二个参数在API11前只有ActivityManager.RECENT_WITH_EXCLUDED。
-List&lt;ActivityManager.RecentTaskInfo&gt;       getRecentTasks(int maxNum, int flags) 
+        <p><a href="http://blog.csdn.net/Zengyangtech/article/details/6025676" target="_blank" rel="external">简要解释一下activity、 intent 、intent filter、service、Broadcast、BroadcaseReceiver</a></p>
+<h1 id="ServiceMananger"><a href="#ServiceMananger" class="headerlink" title="ServiceMananger"></a>ServiceMananger</h1><pre><code>它是在init进程启动之后启动，从名字上就可以看出来它是`用来管理系统中的service`&lt;br/&gt;
+__Service Manager存在的意义__
+* Service Manager能集中管理系统内的所有服务，它能被施加权限控制，并不是任何进程都能注册服务的。
+* Service Manager支持通过字符串名称来查找对应的Service。
+* 由于各种原因的影响，Server进程可能生死无常。如果有了Service Manager做统一的管理，那么Client只要向Service Manager做查询，就能得到Server的最新信息。    
+&lt;br/&gt;参考文献:
+&lt;br/&gt;[Android 之 ServiceManager与服务管理](http://blog.csdn.net/xieqibao/article/details/6585143)
+&lt;br/&gt;[Android Binder机制浅析之ServiceManager](http://blog.csdn.net/hu3167343/article/details/38441119)        
+&lt;br/&gt;&lt;br/&gt;        
+</code></pre><a id="more"></a>
+<h1 id="ActivityManager"><a href="#ActivityManager" class="headerlink" title="ActivityManager"></a>ActivityManager</h1><pre><code>    //1. 返回用户最近使用过的应用程序信息集合。第一个参数是最大数量，第二个参数在API11前只有ActivityManager.RECENT_WITH_EXCLUDED。
+    List&lt;ActivityManager.RecentTaskInfo&gt;       getRecentTasks(int maxNum, int flags) 
 
-//2. 返回设备上正在运行的程序的进程集合。
-List&lt;ActivityManager.RunningAppProcessInfo&gt;           getRunningAppProcesses()
+    //2. 返回设备上正在运行的程序的进程集合。
+    List&lt;ActivityManager.RunningAppProcessInfo&gt;           getRunningAppProcesses()
 
-//3. 返回正在运行中的程序，参数为返回的最大个数，返回的顺序为  最近打开的程序，即优先返回最新使用的程序。返回值可能为空。
-List&lt;ActivityManager.RunningTaskInfo&gt;        getRunningTasks(int maxNum)
+    //3. 返回正在运行中的程序，参数为返回的最大个数，返回的顺序为  最近打开的程序，即优先返回最新使用的程序。返回值可能为空。
+    List&lt;ActivityManager.RunningTaskInfo&gt;        getRunningTasks(int maxNum)
 
-//4. 杀死后台进程，参数为要被杀的程序的（主）包名。需要权限android.permission.KILL_BACKGROUND_PROCESSES。
-void    killBackgroundProcesses (String packageName)
+    //4. 杀死后台进程，参数为要被杀的程序的（主）包名。需要权限android.permission.KILL_BACKGROUND_PROCESSES。
+    void    killBackgroundProcesses (String packageName)
 
-//5. 得到所有正在运行的service。
-List&lt;ActivityManager.RunningServiceInfo&gt;           getRunningServices(int maxNum) 
+    //5. 得到所有正在运行的service。
+    List&lt;ActivityManager.RunningServiceInfo&gt;           getRunningServices(int maxNum) 
 
-//6. 现在这个方法等于方法4了，调用这个方法等于在调用方法4.
-void    restartPackage (String packageName)
-</code></pre><p> ActivityManager的一个运用实例就是，系统后台，可以罗列所有正在运行的程序，并杀死他们<br> <br>参考文献:<br> <br><a href="http://blog.csdn.net/liu149339750/article/details/8111462" target="_blank" rel="external">ActivityManager</a><br> <br><br></p>
-</li>
-<li><p><strong>packageManager</strong></p>
-<p> 可以获取PackageInfo类，就是下面这张图最外面的红框，所有的pack信息都会被返回出来<br> <img src="http://images.cnitblog.com/blog/345073/201310/17160734-68ecdc58626449daa60361b0221cf1a6.png" alt="image"><br> <br>参考文献:<br> <br><a href="http://www.cnblogs.com/xingfuzzhd/p/3374504.html" target="_blank" rel="external">PackageManager使用</a><br> <br><a href="http://www.cnblogs.com/lee0oo0/archive/2012/08/08/2628458.html" target="_blank" rel="external">Android之使用PackageManager取得程序的包名、图标等</a><br> <br><br></p>
-</li>
-<li><p><strong>Binder</strong></p>
-<p> 用于实现同进程或不同进程间，Activity和service之间的通信，本地又一个学习项目<code>BinderActivityAndService</code><br><br>位于/Users/wangchong/AwesomeProject下<br> <br><br></p>
-</li>
-<li><p><strong>IPC进程间通信</strong></p>
-<p> 其实就是进程间通信的一个主要方式，4中用Binder使得Activity和service之间的通信，就是它的使用实例<br> <br>进程间通信还可以使用Intent，Intent还分显示和隐式<br> <br>显式–直接指定消息目的地，只适合同一进程内的不同组件之间通信 <code>new Intent(this,Target.class)</code><br> <br>隐式–AndroidMainifest.xml中注册，一般用于跨进程通信 <code>new Intent(String action)</code><br> <br>参考文献:<br> <br><a href="http://myqdroid.blog.51cto.com/2057579/394189/" target="_blank" rel="external">Android进程间通信–消息机制及IPC机制实现</a><br> <br><a href="http://www.cnblogs.com/freeliver54/archive/2012/06/13/2547739.html" target="_blank" rel="external">Android IPC进程通信——Messager方式</a> (这个其实就是第4点中提到的Binder)<br> <br><br></p>
-</li>
-<li><p><strong>Framework</strong></p>
-<p> 说简单点，Framework具体的工作也就是为android应用开发的开发人员提供了一系列的服务和API的接口。是安卓底层提供的一些功能，有兴趣可以看看源码，了解安卓底层的实现方法<br> <br>参考文献:<br> <br><a href="http://blog.csdn.net/banketree/article/details/24718899" target="_blank" rel="external">Android Framework 记录之一</a><br> <br><a href="http://blog.csdn.net/column/details/android-framework.html" target="_blank" rel="external">Android Framework浅析专题</a> <code>(这个有空要细看，东西很多)</code><br> <br><br>    </p>
-</li>
-<li><strong>Hook</strong>(暂时不看，做个了解)<br> <br><br></li>
-<li><p><strong>SystemService</strong></p>
-<p> 和ServiceManager可以一起学，是在一起的，只是一个系统级的Service<br> <br>参考文献:<br> <br><a href="http://blog.csdn.net/androidmylove/article/details/9004892" target="_blank" rel="external">Android入门进阶教程(12)-SystemService详解</a><br> <br><br></p>
-</li>
-<li><p><strong>View 的渲染</strong></p>
-<p> <br>参考文献:<br> <br><a href="http://www.open-open.com/lib/view/open1437961328925.html" target="_blank" rel="external">Android TextView预渲染研究</a><br> <br><a href="http://www.open-open.com/lib/view/open1429940596948.html" target="_blank" rel="external">Android性能优化之渲染篇</a><br> <br><a href="http://hukai.me/android-performance-render/" target="_blank" rel="external">Android性能优化之渲染篇(原版地址)</a><br> <br><a href="http://www.cnblogs.com/xunbu7/p/4999038.html" target="_blank" rel="external">Android Shape渲染的使用（经典，学习研究不后悔）</a><br> <br><br></p>
-</li>
-<li><strong>Intent 是如何实现 Activity、Service 等之间的解耦合的？</strong>(有点无聊)<br><br><br></li>
-<li><strong>单元测试会写了？Monkey 能跑多长时间？性能测试通过了？</strong>(有点无聊)<br><br><br></li>
-<li><p><strong>ClassLoader 和 DexLoader 会玩了？</strong></p>
-<p><br>参考文献:<br><br><a href="http://blog.csdn.net/com360/article/details/14125683" target="_blank" rel="external">Android中的类装载器DexClassLoader</a><br><br><a href="http://www.cnblogs.com/Lawson/archive/2012/07/31/2616623.html" target="_blank" rel="external">浅谈ClassLoader</a><br><br><a href="http://blog.chinaunix.net/uid-21227800-id-65885.html" target="_blank" rel="external">ClassLoader 详解及用途(写的不错) </a><br><br><br></p>
-</li>
-<li><p><strong>Context 是个啥你也知道了？</strong></p>
-<p><br>参考文献:<br><br><a href="http://blog.csdn.net/qinjuning/article/details/7310620" target="_blank" rel="external">Android中Context详解 —- 你所不知道的Context</a><br><br><a href="http://blog.csdn.net/lmj623565791/article/details/40481055" target="_blank" rel="external">Android Context 上下文 你必须知道的一切</a><br><br><a href="http://www.cnblogs.com/android100/p/Android-Context.html" target="_blank" rel="external">Android源码分析-全面理解Context</a><br><br><br></p>
-</li>
-<li><p><strong>权限机制也弄清楚了？</strong></p>
-<p><br>参考文献:<br><br><a href="http://blog.csdn.net/wxlinwzl/article/details/38395589" target="_blank" rel="external">Android的权限机制总结</a><br><br><a href="http://m.blog.csdn.net/article/details?id=51693586" target="_blank" rel="external">android权限机制，你真的了解么</a><br><br><a href="http://www.cnblogs.com/senix/archive/2013/01/15/2853733.html" target="_blank" rel="external">浅析Android权限机制（一）</a><br><br><a href="http://blog.csdn.net/andyhuabing/article/details/7464680" target="_blank" rel="external">Android 权限控制代码分析</a><br><br><br></p>
-</li>
-<li><p><strong>触屏事件的分发</strong></p>
-<p><br>参考文献:<br><br><a href="http://www.cnblogs.com/linjzong/p/4191891.html" target="_blank" rel="external">Android:30分钟弄明白Touch事件分发机制</a><br><br><a href="http://blog.csdn.net/sunnyfans/article/details/8221505" target="_blank" rel="external">android触摸事件的分发和处理</a><br><br><a href="http://www.w2bc.com/article/117121" target="_blank" rel="external">一个demo让你彻底理解Android中触摸事件的分发</a><br><br><a href="http://blog.csdn.net/lingang1359/article/details/7046071" target="_blank" rel="external">Android 事件冒泡及捕获</a><br><br><a href="http://my.oschina.net/xesam/blog/71135" target="_blank" rel="external">android触屏事件流</a><br><br><br></p>
-</li>
-<li><p><strong>Handler 、Message 和 Looper 是怎么跑起来的</strong></p>
-<p><br>参考文献:<br><br><a href="http://www.cnblogs.com/bastard/archive/2012/06/08/2541944.html" target="_blank" rel="external">Android中消息系统模型和Handler Looper</a><br><br><a href="http://blog.csdn.net/illusion_luna/article/details/8222657" target="_blank" rel="external">详解Handler和Looper的关系</a><br><br><a href="http://my.oschina.net/u/1024921/blog/121647" target="_blank" rel="external">Message、Handler、MessageQueue、Looper之间的关系</a><br><br><br></p>
-</li>
-</ol>
+    //6. 现在这个方法等于方法4了，调用这个方法等于在调用方法4.
+    void    restartPackage (String packageName)
 
+ActivityManager的一个运用实例就是，系统后台，可以罗列所有正在运行的程序，并杀死他们
+&lt;br/&gt;参考文献:
+&lt;br/&gt;[ActivityManager](http://blog.csdn.net/liu149339750/article/details/8111462)
+&lt;br/&gt;&lt;br/&gt;
+</code></pre><h1 id="packageManager"><a href="#packageManager" class="headerlink" title="packageManager"></a>packageManager</h1><pre><code>可以获取PackageInfo类，就是下面这张图最外面的红框，所有的pack信息都会被返回出来
+![image](http://images.cnitblog.com/blog/345073/201310/17160734-68ecdc58626449daa60361b0221cf1a6.png)
+&lt;br/&gt;参考文献:
+&lt;br/&gt;[PackageManager使用](http://www.cnblogs.com/xingfuzzhd/p/3374504.html)
+&lt;br/&gt;[Android之使用PackageManager取得程序的包名、图标等](http://www.cnblogs.com/lee0oo0/archive/2012/08/08/2628458.html)
+&lt;br/&gt;&lt;br/&gt;
+</code></pre><h1 id="Binder"><a href="#Binder" class="headerlink" title="Binder"></a>Binder</h1><pre><code>用于实现同进程或不同进程间，Activity和service之间的通信，本地又一个学习项目`BinderActivityAndService`
+</code></pre><p><br>位于/Users/wangchong/AwesomeProject下<br>    <br><br></p>
+<h1 id="IPC进程间通信"><a href="#IPC进程间通信" class="headerlink" title="IPC进程间通信"></a>IPC进程间通信</h1><pre><code>其实就是进程间通信的一个主要方式，4中用Binder使得Activity和service之间的通信，就是它的使用实例
+&lt;br/&gt;进程间通信还可以使用Intent，Intent还分显示和隐式
+&lt;br/&gt;显式--直接指定消息目的地，只适合同一进程内的不同组件之间通信 `new Intent(this,Target.class)`
+&lt;br/&gt;隐式--AndroidMainifest.xml中注册，一般用于跨进程通信 `new Intent(String action)`
+&lt;br/&gt;参考文献:
+&lt;br/&gt;[Android进程间通信--消息机制及IPC机制实现](http://myqdroid.blog.51cto.com/2057579/394189/)
+&lt;br/&gt;[Android IPC进程通信——Messager方式](http://www.cnblogs.com/freeliver54/archive/2012/06/13/2547739.html) (这个其实就是第4点中提到的Binder)
+&lt;br/&gt;&lt;br/&gt;
+</code></pre><h1 id="Framework"><a href="#Framework" class="headerlink" title="Framework"></a>Framework</h1><pre><code>说简单点，Framework具体的工作也就是为android应用开发的开发人员提供了一系列的服务和API的接口。是安卓底层提供的一些功能，有兴趣可以看看源码，了解安卓底层的实现方法
+&lt;br/&gt;参考文献:
+&lt;br/&gt;[Android Framework 记录之一](http://blog.csdn.net/banketree/article/details/24718899)
+&lt;br/&gt;[Android Framework浅析专题](http://blog.csdn.net/column/details/android-framework.html) `(这个有空要细看，东西很多)`
+&lt;br/&gt;&lt;br/&gt;    
+</code></pre><h1 id="Hook-暂时不看，做个了解"><a href="#Hook-暂时不看，做个了解" class="headerlink" title="Hook(暂时不看，做个了解)"></a>Hook(暂时不看，做个了解)</h1><pre><code>&lt;br/&gt;&lt;br/&gt;
+</code></pre><h1 id="SystemService"><a href="#SystemService" class="headerlink" title="SystemService"></a>SystemService</h1><pre><code>和ServiceManager可以一起学，是在一起的，只是一个系统级的Service
+&lt;br/&gt;参考文献:
+&lt;br/&gt;[Android入门进阶教程(12)-SystemService详解](http://blog.csdn.net/androidmylove/article/details/9004892)
+&lt;br/&gt;&lt;br/&gt;
+</code></pre><h1 id="View-的渲染"><a href="#View-的渲染" class="headerlink" title="View 的渲染"></a>View 的渲染</h1><pre><code>&lt;br/&gt;参考文献:
+&lt;br/&gt;[Android TextView预渲染研究](http://www.open-open.com/lib/view/open1437961328925.html)
+&lt;br/&gt;[Android性能优化之渲染篇](http://www.open-open.com/lib/view/open1429940596948.html) 
+&lt;br/&gt;[Android性能优化之渲染篇(原版地址)](http://hukai.me/android-performance-render/) 
+&lt;br/&gt;[Android Shape渲染的使用（经典，学习研究不后悔）](http://www.cnblogs.com/xunbu7/p/4999038.html) 
+&lt;br/&gt;&lt;br/&gt;
+</code></pre><h1 id="Intent-是如何实现-Activity、Service-等之间的解耦合的？-有点无聊"><a href="#Intent-是如何实现-Activity、Service-等之间的解耦合的？-有点无聊" class="headerlink" title="Intent 是如何实现 Activity、Service 等之间的解耦合的？(有点无聊)"></a>Intent 是如何实现 Activity、Service 等之间的解耦合的？(有点无聊)</h1><pre><code>&lt;br/&gt;&lt;br/&gt;
+</code></pre><h1 id="单元测试会写了？Monkey-能跑多长时间？性能测试通过了？-有点无聊"><a href="#单元测试会写了？Monkey-能跑多长时间？性能测试通过了？-有点无聊" class="headerlink" title="单元测试会写了？Monkey 能跑多长时间？性能测试通过了？(有点无聊)"></a>单元测试会写了？Monkey 能跑多长时间？性能测试通过了？(有点无聊)</h1><pre><code>&lt;br/&gt;&lt;br/&gt;
+</code></pre><h1 id="ClassLoader-和-DexLoader-会玩了？"><a href="#ClassLoader-和-DexLoader-会玩了？" class="headerlink" title="ClassLoader 和 DexLoader 会玩了？"></a>ClassLoader 和 DexLoader 会玩了？</h1><pre><code>&lt;br/&gt;参考文献:
+&lt;br/&gt;[Android中的类装载器DexClassLoader](http://blog.csdn.net/com360/article/details/14125683)
+&lt;br/&gt;[浅谈ClassLoader](http://www.cnblogs.com/Lawson/archive/2012/07/31/2616623.html) 
+&lt;br/&gt;[ClassLoader 详解及用途(写的不错) ](http://blog.chinaunix.net/uid-21227800-id-65885.html) 
+&lt;br/&gt;&lt;br/&gt;
+</code></pre><h1 id="Context-是个啥你也知道了？"><a href="#Context-是个啥你也知道了？" class="headerlink" title="Context 是个啥你也知道了？"></a>Context 是个啥你也知道了？</h1><pre><code>&lt;br/&gt;参考文献:
+&lt;br/&gt;[Android中Context详解 ---- 你所不知道的Context](http://blog.csdn.net/qinjuning/article/details/7310620)
+&lt;br/&gt;[Android Context 上下文 你必须知道的一切](http://blog.csdn.net/lmj623565791/article/details/40481055) 
+&lt;br/&gt;[Android源码分析-全面理解Context](http://www.cnblogs.com/android100/p/Android-Context.html) 
+&lt;br/&gt;&lt;br/&gt;
+</code></pre><h1 id="权限机制也弄清楚了？"><a href="#权限机制也弄清楚了？" class="headerlink" title="权限机制也弄清楚了？"></a>权限机制也弄清楚了？</h1><pre><code>&lt;br/&gt;参考文献:
+&lt;br/&gt;[Android的权限机制总结](http://blog.csdn.net/wxlinwzl/article/details/38395589)
+&lt;br/&gt;[android权限机制，你真的了解么](http://m.blog.csdn.net/article/details?id=51693586) 
+&lt;br/&gt;[浅析Android权限机制（一）](http://www.cnblogs.com/senix/archive/2013/01/15/2853733.html) 
+&lt;br/&gt;[Android 权限控制代码分析](http://blog.csdn.net/andyhuabing/article/details/7464680) 
+&lt;br/&gt;&lt;br/&gt;
+</code></pre><h1 id="触屏事件的分发"><a href="#触屏事件的分发" class="headerlink" title="触屏事件的分发"></a>触屏事件的分发</h1><pre><code>&lt;br/&gt;参考文献:
+&lt;br/&gt;[Android:30分钟弄明白Touch事件分发机制](http://www.cnblogs.com/linjzong/p/4191891.html)
+&lt;br/&gt;[android触摸事件的分发和处理](http://blog.csdn.net/sunnyfans/article/details/8221505) 
+&lt;br/&gt;[一个demo让你彻底理解Android中触摸事件的分发](http://www.w2bc.com/article/117121) 
+&lt;br/&gt;[Android 事件冒泡及捕获](http://blog.csdn.net/lingang1359/article/details/7046071) 
+&lt;br/&gt;[android触屏事件流](http://my.oschina.net/xesam/blog/71135)
+&lt;br/&gt;&lt;br/&gt;
+</code></pre><h1 id="Handler-、Message-和-Looper-是怎么跑起来的"><a href="#Handler-、Message-和-Looper-是怎么跑起来的" class="headerlink" title="Handler 、Message 和 Looper 是怎么跑起来的"></a>Handler 、Message 和 Looper 是怎么跑起来的</h1><pre><code>&lt;br/&gt;参考文献:
+&lt;br/&gt;[Android中消息系统模型和Handler Looper](http://www.cnblogs.com/bastard/archive/2012/06/08/2541944.html)
+&lt;br/&gt;[详解Handler和Looper的关系](http://blog.csdn.net/illusion_luna/article/details/8222657) 
+&lt;br/&gt;[Message、Handler、MessageQueue、Looper之间的关系](http://my.oschina.net/u/1024921/blog/121647) 
+&lt;br/&gt;&lt;br/&gt;
+</code></pre>
       
     </div>
 
@@ -468,7 +483,7 @@ void    restartPackage (String packageName)
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -500,7 +515,7 @@ void    restartPackage (String packageName)
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ServiceMananger"><span class="nav-number">1.</span> <span class="nav-text">ServiceMananger</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ActivityManager"><span class="nav-number">2.</span> <span class="nav-text">ActivityManager</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#packageManager"><span class="nav-number">3.</span> <span class="nav-text">packageManager</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Binder"><span class="nav-number">4.</span> <span class="nav-text">Binder</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IPC进程间通信"><span class="nav-number">5.</span> <span class="nav-text">IPC进程间通信</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Framework"><span class="nav-number">6.</span> <span class="nav-text">Framework</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hook-暂时不看，做个了解"><span class="nav-number">7.</span> <span class="nav-text">Hook(暂时不看，做个了解)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SystemService"><span class="nav-number">8.</span> <span class="nav-text">SystemService</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#View-的渲染"><span class="nav-number">9.</span> <span class="nav-text">View 的渲染</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Intent-是如何实现-Activity、Service-等之间的解耦合的？-有点无聊"><span class="nav-number">10.</span> <span class="nav-text">Intent 是如何实现 Activity、Service 等之间的解耦合的？(有点无聊)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#单元测试会写了？Monkey-能跑多长时间？性能测试通过了？-有点无聊"><span class="nav-number">11.</span> <span class="nav-text">单元测试会写了？Monkey 能跑多长时间？性能测试通过了？(有点无聊)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ClassLoader-和-DexLoader-会玩了？"><span class="nav-number">12.</span> <span class="nav-text">ClassLoader 和 DexLoader 会玩了？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Context-是个啥你也知道了？"><span class="nav-number">13.</span> <span class="nav-text">Context 是个啥你也知道了？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#权限机制也弄清楚了？"><span class="nav-number">14.</span> <span class="nav-text">权限机制也弄清楚了？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#触屏事件的分发"><span class="nav-number">15.</span> <span class="nav-text">触屏事件的分发</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Handler-、Message-和-Looper-是怎么跑起来的"><span class="nav-number">16.</span> <span class="nav-text">Handler 、Message 和 Looper 是怎么跑起来的</span></a></li></ol></div>
             
           </div>
         </section>

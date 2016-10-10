@@ -84,40 +84,22 @@
 
 
 
-<meta name="description" content="首先安装环境&amp;lt;pre&amp;gt;
-    brew install node
-    brew install watchman
-&amp;lt;/pre&amp;gt;
-安装react-native&amp;lt;pre&amp;gt;
-    npm install -g react-native-cli
-&amp;lt;/pre&amp;gt;
-创建react-nactive项目&amp;lt;pre&amp;gt;
-    react-native">
+<meta name="description" content="Hexo初始化博客框架1.安装HexoHexo安装和搭建依赖Nodejs和Git,可自行下载。
+
+$ npm install -g hexo-cli">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React Native 读书笔记">
-<meta property="og:url" content="http://yoursite.com/2016/07/12/React_native读书笔记/index.html">
+<meta property="og:title" content="通过HEXO在Github上搭建博客学习笔记">
+<meta property="og:url" content="http://yoursite.com/2016/10/10/HEXO在Github上搭建博客学习笔记/index.html">
 <meta property="og:site_name" content="Jerry's blog">
-<meta property="og:description" content="首先安装环境&amp;lt;pre&amp;gt;
-    brew install node
-    brew install watchman
-&amp;lt;/pre&amp;gt;
-安装react-native&amp;lt;pre&amp;gt;
-    npm install -g react-native-cli
-&amp;lt;/pre&amp;gt;
-创建react-nactive项目&amp;lt;pre&amp;gt;
-    react-native">
-<meta property="og:updated_time" content="2016-10-10T10:00:23.000Z">
+<meta property="og:description" content="Hexo初始化博客框架1.安装HexoHexo安装和搭建依赖Nodejs和Git,可自行下载。
+
+$ npm install -g hexo-cli">
+<meta property="og:updated_time" content="2016-10-10T09:56:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="React Native 读书笔记">
-<meta name="twitter:description" content="首先安装环境&amp;lt;pre&amp;gt;
-    brew install node
-    brew install watchman
-&amp;lt;/pre&amp;gt;
-安装react-native&amp;lt;pre&amp;gt;
-    npm install -g react-native-cli
-&amp;lt;/pre&amp;gt;
-创建react-nactive项目&amp;lt;pre&amp;gt;
-    react-native">
+<meta name="twitter:title" content="通过HEXO在Github上搭建博客学习笔记">
+<meta name="twitter:description" content="Hexo初始化博客框架1.安装HexoHexo安装和搭建依赖Nodejs和Git,可自行下载。
+
+$ npm install -g hexo-cli">
 
 
 
@@ -138,9 +120,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/07/12/React_native读书笔记/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/10/10/HEXO在Github上搭建博客学习笔记/"/>
 
-  <title> React Native 读书笔记 | Jerry's blog </title>
+  <title> 通过HEXO在Github上搭建博客学习笔记 | Jerry's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -260,7 +242,7 @@
             
             
               
-                React Native 读书笔记
+                通过HEXO在Github上搭建博客学习笔记
               
             
           </h1>
@@ -272,8 +254,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-12T12:35:43+08:00" content="2016-07-12">
-              2016-07-12
+            <time itemprop="dateCreated" datetime="2016-10-10T17:35:43+08:00" content="2016-10-10">
+              2016-10-10
             </time>
           </span>
 
@@ -300,55 +282,102 @@
       
 
       
-        <h1 id="首先安装环境"><a href="#首先安装环境" class="headerlink" title="首先安装环境"></a>首先安装环境</h1><pre><code>&lt;pre&gt;
-    brew install node
-    brew install watchman
-&lt;/pre&gt;
-</code></pre><h1 id="安装react-native"><a href="#安装react-native" class="headerlink" title="安装react-native"></a>安装react-native</h1><pre><code>&lt;pre&gt;
-    npm install -g react-native-cli
-&lt;/pre&gt;
-</code></pre><h1 id="创建react-nactive项目"><a href="#创建react-nactive项目" class="headerlink" title="创建react-nactive项目"></a>创建react-nactive项目</h1><pre><code>&lt;pre&gt;
-    react-native init AwesomeProject
-&lt;/pre&gt;
-</code></pre><a id="more"></a>
-<ul>
-<li><p>用android studio 打开AwesomeProject文件夹下的<code>android文件夹</code>，这个文件夹才是安卓项目，直接打开AwesomeProject，无法在图形化界面启动debug</p>
-</li>
-<li><p>在android studio内的Terminal中输入adb devices，检查手机是否正常链接</p>
+        <h1 id="Hexo初始化博客框架"><a href="#Hexo初始化博客框架" class="headerlink" title="Hexo初始化博客框架"></a>Hexo初始化博客框架</h1><h2 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1.安装Hexo"></a>1.安装Hexo</h2><p>Hexo安装和搭建依赖Nodejs和Git,可自行下载。</p>
 <pre>
-   $ adb devices
-   List of devices attached
-   emulator-5554 offline   # Google模拟器
-   14ed2fcc device         # 真实设备
-</pre></li>
-<li>cd .. 回到AwesomeProject目录，输入react-native run-android 项目启动<pre>
-   cd ..
-   react-native run-android
+$ npm install -g hexo-cli
+</pre>
+<a id="more"></a>
+## 2.初始化框架
+<pre>
+$ hexo init (yourFolder)
+$ cd (yourFolder)
+$ npm install
 </pre>
 
-</li>
-</ul>
-<h1 id="重点来了"><a href="#重点来了" class="headerlink" title="重点来了"></a>重点来了</h1><p>这时候可能显示一个红色界面，不可用，按照一下步骤操作</p>
-<ol>
-<li><code>首先确保你的电脑和手机设备在同一个Wi-Fi环境下。</code></li>
-<li>在设备上运行你的React Native应用。和打开其它App一样操作。</li>
-<li>你应该会看到一个“红屏”错误提示。这是正常的，下面的步骤会解决这个报错。</li>
-<li>摇晃设备，或者运行adb shell input keyevent 82，可以打开开发者菜单。</li>
-<li>点击进入Dev Settings。</li>
-<li>点击Debug server host for device。</li>
-<li>输入你电脑的IP地址和端口号（譬如10.0.1.1:8081）。在Mac上，你可以在系统设置/网络里找查询你的IP地址。在Windows上，打开命令提示符并输入ipconfig来查询你的IP地址。在Linux上你可以在终端中输入ifconfig来查询你的IP地址。</li>
-<li>回到开发者菜单然后选择Reload JS。</li>
-</ol>
-<p>(Android 5.0及以上)使用adb reverse命令</p>
-<ol>
-<li>首先把你的设备通过USB数据线连接到电脑上，并开启USB调试（关于如何开启USB调试，参见上面的章节）。</li>
-<li>运行adb reverse tcp:8081 tcp:8081</li>
-<li>需要更多配置，你就可以使用Reload JS和其它的开发选项了。</li>
-</ol>
-<p>完成上面的设置后，你的手机可能仍显示红色屏幕，<code>这时候可能是js服务器没有启动</code>，你需要启动他，在android studio内的Terminal中输入:</p>
-<pre><code>react-native start
-</code></pre><p>现在可以跑了，我用android studio负责完成链接手机调试功能, 用Atom编辑JS文件</p>
+<p>初始化完成大概的目录：</p>
+<pre>
+.
+├── _config.yml //网站的 配置 信息，您可以在此配置大部分的参数。
+├── package.json
+├── scaffolds     //模版 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。
+├── source     //资源文件夹是存放用户资源的地方。
+|   ├── _drafts
+|   └── _posts
+└── themes     //主题 文件夹。Hexo 会根据主题来生成静态页面。
+</pre>
 
+<h2 id="3-新建文章（创建一个Hello-World）"><a href="#3-新建文章（创建一个Hello-World）" class="headerlink" title="3.新建文章（创建一个Hello World）"></a>3.新建文章（创建一个Hello World）</h2><pre>
+$ hexo new "Hello World"
+</pre>
+
+<p>在/source/_post里添加hello-world.md文件，之后新建的文章都将存放在此目录下。</p>
+<h2 id="4-生成网站"><a href="#4-生成网站" class="headerlink" title="4.生成网站"></a>4.生成网站</h2><pre>
+$ hexo generate
+</pre>
+此时会将/source的.md文件生成到/public中，形成网站的静态文件。
+
+## 5.服务器
+<pre>
+$ hexo server -p 3000
+</pre>
+
+<pre>
+$ hexo s
+</pre>
+看到 INFO Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop. 之后，就可以在浏览器中打开页面http://localhost:4000来看了。
+
+### 安装git部署插件 (感觉可以不做)
+在部署之前，首先我们要确认在你的Github帐号的Repository中有 用户名.github.io 的项目。
+在确认之后，就可以执行命令
+<pre>
+$ npm install hexo-deployer-git
+</pre>
+
+
+<h3 id="配置-config-yml-文件"><a href="#配置-config-yml-文件" class="headerlink" title="配置 _config.yml 文件"></a>配置 _config.yml 文件</h3><p>在Hexo安装的目录，如 ~/Document/hexo 中找到 _config.yml 文件。打开。<br>翻到最后，找到 deploy 字样，改成如下格式：</p>
+<pre>
+deploy: 
+  type: git 
+  repo: https://github.com/用户名/用户名.github.io.git 
+  branch: master
+</pre>
+
+<h2 id="6-部署网站"><a href="#6-部署网站" class="headerlink" title="6.部署网站"></a>6.部署网站</h2><pre>
+$ hexo deploy
+</pre>
+
+
+<h2 id="以后每次执行就可以依次输入下面三行命令："><a href="#以后每次执行就可以依次输入下面三行命令：" class="headerlink" title="以后每次执行就可以依次输入下面三行命令："></a>以后每次执行就可以依次输入下面三行命令：</h2><pre>
+$ hexo clean
+$ hexo generate
+$ hexo deploy
+</pre>
+
+
+
+<h1 id="使用Next主题让站点更酷炫"><a href="#使用Next主题让站点更酷炫" class="headerlink" title="使用Next主题让站点更酷炫"></a>使用Next主题让站点更酷炫</h1><h2 id="1-先把next主题下载到你的项目里"><a href="#1-先把next主题下载到你的项目里" class="headerlink" title="1.先把next主题下载到你的项目里"></a>1.先把next主题下载到你的项目里</h2><pre>
+$ cd your-hexo-site
+$ git clone https://github.com/iissnan/hexo-theme-next themes/next
+</pre>
+从Next的Gihub仓库中获取最新版本。
+
+## 2.设置你的项目使用next
+需要修改/root/_config.yml配置项theme：
+<pre>
+theme: next
+</pre>
+
+<h2 id="3-验证"><a href="#3-验证" class="headerlink" title="3.验证"></a>3.验证</h2><pre>
+$ hexo s
+</pre>
+
+<h2 id="next内置三种不同的布局可供切换"><a href="#next内置三种不同的布局可供切换" class="headerlink" title="next内置三种不同的布局可供切换"></a>next内置三种不同的布局可供切换</h2><p>在\hexo\themes\next_config.yml中修改</p>
+<pre>
+# Schemes  #next的三个scheme
+#scheme: Muse
+#scheme: Mist
+scheme: Pisces
+</pre>
       
     </div>
 
@@ -373,12 +402,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/07/14/Intent学习笔记/" rel="next" title="Intent笔记">
+                <i class="fa fa-chevron-left"></i> Intent笔记
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/12/Butter Knife学习笔记/" rel="prev" title="ButterKnife学习笔记">
-                ButterKnife学习笔记 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/10/10/创建GitHub技术博客学习笔记/" rel="prev" title="创建GitHub技术博客学习笔记">
+                创建GitHub技术博客学习笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -479,7 +512,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#首先安装环境"><span class="nav-number">1.</span> <span class="nav-text">首先安装环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装react-native"><span class="nav-number">2.</span> <span class="nav-text">安装react-native</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建react-nactive项目"><span class="nav-number">3.</span> <span class="nav-text">创建react-nactive项目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#重点来了"><span class="nav-number">4.</span> <span class="nav-text">重点来了</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo初始化博客框架"><span class="nav-number">1.</span> <span class="nav-text">Hexo初始化博客框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装Hexo"><span class="nav-number">1.1.</span> <span class="nav-text">1.安装Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-新建文章（创建一个Hello-World）"><span class="nav-number">1.2.</span> <span class="nav-text">3.新建文章（创建一个Hello World）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-生成网站"><span class="nav-number">1.3.</span> <span class="nav-text">4.生成网站</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-config-yml-文件"><span class="nav-number">1.3.1.</span> <span class="nav-text">配置 _config.yml 文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-部署网站"><span class="nav-number">1.4.</span> <span class="nav-text">6.部署网站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#以后每次执行就可以依次输入下面三行命令："><span class="nav-number">1.5.</span> <span class="nav-text">以后每次执行就可以依次输入下面三行命令：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用Next主题让站点更酷炫"><span class="nav-number">2.</span> <span class="nav-text">使用Next主题让站点更酷炫</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-先把next主题下载到你的项目里"><span class="nav-number">2.1.</span> <span class="nav-text">1.先把next主题下载到你的项目里</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-验证"><span class="nav-number">2.2.</span> <span class="nav-text">3.验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#next内置三种不同的布局可供切换"><span class="nav-number">2.3.</span> <span class="nav-text">next内置三种不同的布局可供切换</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
